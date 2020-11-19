@@ -1,0 +1,35 @@
+<div
+  class="hz-tree-node"
+  [class.hz-tree-node-active]="active"
+  [class.hz-tree-node-disabled]="node.disabled"
+  [class.hz-tree-node-selected]="node.selected"
+  [class.hz-tree-node-leaf]="node.isLeaf"
+  [class.hz-tree-node-start]="node.isStart.slice(-1)[0]"
+  [class.hz-tree-node-end]="node.isEnd.slice(-1)[0]"
+  [class.hz-tree-node-no-hover-effect]="store.noHoverEffect"
+  [style.paddingLeft]="level * store.nodeIndent + 'px'"
+>
+  <hz-tree-node-branch [node]="node" *ngIf="store.showTreeBranch"></hz-tree-node-branch>
+  <hz-tree-node-toggle
+    [node]="node"
+    [expanded]="node.expanded"
+    [loading]="node.loading"
+    (toggleClick)="onToggleClick($event)"
+    *ngIf="store.showNodeToggle"
+  ></hz-tree-node-toggle>
+  <hz-tree-node-checkbox
+    *ngIf="store.checkable"
+    [node]="node"
+    [checked]="checked"
+    [indeterminate]="indeterminate"
+    (click)="onCheckboxClick($event)"
+  ></hz-tree-node-checkbox>
+  <div class="hz-tree-node-content">
+    <ng-template
+      [ngTemplateOutlet]="store.nodeTemplate"
+      [ngTemplateOutletContext]="{ $implicit: node }"
+    ></ng-template>
+    <ng-container *ngIf="!store.nodeTemplate">{{ node.title }}</ng-container>
+  </div>
+  <i class="hz-tree-node-selected-icon" hz-icon hzName="info-ok"></i>
+</div>

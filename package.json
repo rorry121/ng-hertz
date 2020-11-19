@@ -8,7 +8,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build": "node --max_old_space_size=4096 ./node_modules/@angular/cli/bin/ng build --project=ng-hertz-library",
-    "build:doc": "ng build --base-href /ng-hertz/ --prod",
+    "build:doc": "ng build --base-href /ng-hertz-doc/ --prod",
     "build:lib": "npm run build",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --pkg ng-hertz-library/components/package.json"
   },
@@ -30,6 +30,8 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.29",
     "@angular-devkit/build-ng-packagr": "~0.803.29",
+    "@angular/cdk": "^8.2.3",
+    "@haizhi/ui": "2.2.1",
     "@angular/cli": "~8.3.20",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",

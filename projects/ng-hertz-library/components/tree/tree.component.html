@@ -1,0 +1,64 @@
+<ng-container *ngIf="hzVirtualHeight">
+  <cdk-virtual-scroll-viewport
+    *ngIf="flatTreeNodeKeys && flatTreeNodeKeys.length > 0; else emptyList"
+    [style.height]="hzVirtualHeight"
+    [minBufferPx]="this.hzVirtualMinBufferPx"
+    [maxBufferPx]="hzVirtualMaxBufferPx"
+    [itemSize]="hzVirtualItemSize"
+  >
+    <ng-container *cdkVirtualFor="let key of flatTreeNodeKeys; trackBy: trackByFn; let i = index">
+      <ng-container *ngIf="fullTreeNodeMap.get(key) as node">
+        <hz-tree-node
+          [node]="node"
+          [level]="node.level"
+          [checked]="node.checked"
+          [loading]="node.loading"
+          [active]="store.activeNodeKey === node.key"
+          [selected]="node.selected"
+          [indeterminate]="node.indeterminate"
+          (toggleChange)="onToggleChange(node)"
+          (click)="onNodeClick(node)"
+        ></hz-tree-node>
+        <div class="hz-tree-node-extra-content" *ngIf="store.nodeExtraTemplate">
+          <ng-template
+            [ngTemplateOutlet]="store.nodeExtraTemplate"
+            [ngTemplateOutletContext]="{ $implicit: node }"
+          ></ng-template>
+        </div>
+      </ng-container>
+    </ng-container>
+  </cdk-virtual-scroll-viewport>
+</ng-container>
+
+<ng-container *ngIf="!hzVirtualHeight">
+  <div
+    class="hz-tree-node-wrap"
+    *ngIf="flatTreeNodeKeys && flatTreeNodeKeys.length > 0; else emptyList"
+  >
+    <ng-container *ngFor="let key of flatTreeNodeKeys; trackBy: trackByFn; let i = index">
+      <ng-container *ngIf="fullTreeNodeMap.get(key) as node">
+        <hz-tree-node
+          [node]="node"
+          [level]="node.level"
+          [checked]="node.checked"
+          [loading]="node.loading"
+          [active]="store.activeNodeKey === node.key"
+          [selected]="node.selected"
+          [indeterminate]="node.indeterminate"
+          (toggleChange)="onToggleChange(node)"
+          (click)="onNodeClick(node)"
+        ></hz-tree-node>
+        <div class="hz-tree-node-extra-content" *ngIf="store.nodeExtraTemplate">
+          <ng-template
+            [ngTemplateOutlet]="store.nodeExtraTemplate"
+            [ngTemplateOutletContext]="{ $implicit: node }"
+          ></ng-template>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</ng-container>
+
+<ng-template #emptyList>
+  <div class="hz-tree-empty-wrap">{{ hzEmptyPlaceholder }}</div>
+</ng-template>

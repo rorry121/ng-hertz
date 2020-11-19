@@ -1,0 +1,8 @@
+<div class="hz-nav-submenu-title" (click)="toggle()">
+  <i *ngIf="hzIcon" class="hz-nav-submenu-icon" hz-icon hzSize="20px" [hzName]="hzIcon"></i>
+  <span class="hz-nav-submenu-text">{{ hzTitle }}</span>
+  <i class="hz-nav-submenu-triangle" hz-icon hzName="triangle"></i>
+</div>
+<div class="hz-nav-submenu-content" *ngIf="hzExpand" @dropdownMotion>
+  <ng-content></ng-content>
+</div>

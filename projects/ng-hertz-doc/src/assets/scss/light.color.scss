@@ -1,0 +1,87 @@
+:root[theme='light'] {
+  /** primary **/
+  --primary-900: #1f71ff;
+  --primary-800: #3d85ff;
+  --primary-700: #337eff;
+  --primary-a100: rgba(43, 121, 255, 0.1);
+  --primary-a200: rgba(43, 121, 255, 0.16);
+  --primary-a300: rgba(43, 121, 255, 0.24);
+
+  /** mono **/
+  --mono-100: #ffffff;
+  --mono-200: #f7f8fa;
+  --mono-300: #eef0f4;
+  --mono-400: #e2e4e9;
+  --mono-500: #d7d9de;
+  --mono-600: #ccced4;
+  --mono-a100: rgba(15, 34, 67, 0.05);
+  --mono-a200: rgba(15, 34, 67, 0.07);
+  --mono-a300: rgba(15, 34, 67, 0.11);
+  --mono-a400: rgba(15, 34, 67, 0.14);
+  --mono-a500: rgba(15, 34, 67, 0.2);
+  --mono-a900: rgba(15, 34, 67, 0.9);
+  --mono-m100: rgba(226, 228, 233, 0.88);
+
+  /** background **/
+  --background-100: #ffffff;
+  --background-200: #ffffff;
+  --background-300: #ffffff;
+  --background-400: #ffffff;
+  --background-500: #ffffff;
+  --background-600: #ffffff;
+
+  /** type **/
+  --type-600: rgba(21, 22, 24, 0.36);
+  --type-700: rgba(21, 22, 24, 0.48);
+  --type-800: rgba(21, 22, 24, 0.72);
+  --type-900: rgba(21, 22, 24, 0.92);
+
+  /** general **/
+  --general-100: #ffffff;
+  --general-900: #151618;
+
+  /** cerulean **/
+  --ceruleam-900: #0099eb;
+  --ceruleam-a100: rgba(0, 153, 235, 0.12);
+
+  /** teal **/
+  --teal-900: #00bbc2;
+  --teal-450: rgba(0, 187, 194, 0.06);
+  --teal-a100: rgba(0, 187, 194, 0.12);
+  --teal-a200: rgba(0, 187, 194, 0.22);
+  --teal-a300: rgba(0, 187, 194, 0.32);
+  --teal-a500: rgba(0, 187, 194, 0.5);
+
+  /** orange **/
+  --orange-900: #ff9431;
+  --orange-a100: rgba(255, 148, 49, 0.12);
+
+  /** violet **/
+  --violet-900: #9646ff;
+  --violet-a100: rgba(150, 70, 255, 0.09);
+
+  /** yellow **/
+  --yellow-900: #f5cd00;
+  --yellow-a100: rgba(245, 205, 0, 0.16);
+
+  /** red **/
+  --red-100: #ffeff1;
+  --red-200: #ffe5e8;
+  --red-900: #ff5266;
+  --red-a100: rgba(255, 82, 102, 0.09);
+  --red-a200: rgba(255, 82, 102, 0.15);
+  --red-a300: rgba(255, 82, 102, 0.22);
+
+  /** Lime **/
+  --lime-900: #239545;
+  --lime-a100: rgba(35, 149, 69, 0.1);
+  --lime-a300: rgba(35, 149, 69, 0.22);
+
+  /** shadow **/
+  --container-c100: 0px 8px 64px rgba(15, 34, 67, 0.1), 0px 0px 1px rgba(15, 34, 67, 0.16);
+  --container-c200: 0px 4px 8px rgba(15, 34, 67, 0.03), 0px 1px 3px rgba(15, 34, 67, 0.08), 0px 0px 1px rgba(15, 34, 67, 0.16);
+  --container-c300: 0px 8px 24px -6px rgba(15, 34, 67, 0.16), 0px 1px 3px rgba(15, 34, 67, 0.12), 0px 0px 1px rgba(15, 34, 67, 0.16);
+  --container-c400: 0px 16px 32px -6px rgba(15, 34, 67, 0.18), 0px 3px 8px -2px rgba(15, 34, 67, 0.16), 0px 0px 1px rgba(15, 34, 67, 0.16);
+  --container-c500: 0px 48px 128px -16px rgba(15, 34, 67, 0.24), 0px 16px 64px -16px rgba(15, 34, 67, 0.32),
+    0px 0px 1px rgba(15, 34, 67, 0.16);
+}

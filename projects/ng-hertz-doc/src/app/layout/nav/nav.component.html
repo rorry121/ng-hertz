@@ -1,1 +1,14 @@
-<p>nav works!</p>
+<nav class="doc-nav">
+  <div hz-nav-menu class="doc-nav-list">
+    <ul>
+      <li
+        *ngFor="let item of list"
+        hz-nav-menu-item
+        [routerLink]="'/' + item.path"
+        routerLinkActive="active"
+      >
+        {{ item.path | titlecase }}
+      </li>
+    </ul>
+  </div>
+</nav>

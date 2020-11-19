@@ -1,0 +1,17 @@
+<span
+  *ngFor="let item of list; let i = index"
+  class="hz-tree-node-branch-unit"
+  [style.width]="store.nodeIndent + 'px'"
+  [class.hz-tree-node-branch-unit-start]="node.isStart[i]"
+  [class.hz-tree-node-branch-unit-end]="node.isEnd[i]"
+></span>
+<span
+  class="hz-tree-node-leaf-branch-x"
+  *ngIf="node.isLeaf"
+  [style.top]="store.leafNodeBranchY"
+></span>
+<span
+  class="hz-tree-node-leaf-branch-y"
+  *ngIf="node.isLeaf"
+  [style.height]="node.isEnd.slice(-1)[0] ? store.leafNodeBranchY : '100%'"
+></span>

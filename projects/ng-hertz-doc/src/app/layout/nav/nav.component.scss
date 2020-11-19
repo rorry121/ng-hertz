@@ -1,0 +1,21 @@
+.doc-nav {
+  width: var(--nav-width);
+  transform: translateX(var(--nav-transform));
+  padding-top: var(--header-height);
+  box-sizing: border-box;
+  height: 100%;
+  box-shadow: var(--container-c200);
+  background-color: var(--mono-100);
+  transition: all 0.4s cubic-bezier(0.2, 1, 0.2, 1);
+  position: absolute;
+  top: 0;
+  .doc-nav-list {
+    padding: 24px 0;
+    li {
+      height: 36px;
+      line-height: 36px;
+      padding: 0 24px 0 16px;
+      font-size: 14px;
+    }
+  }
+}

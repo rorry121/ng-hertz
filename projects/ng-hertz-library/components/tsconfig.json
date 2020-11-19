@@ -1,0 +1,12 @@
+// Configuration for IDEs only.
+
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./components",
+    "rootDir": ".",
+    "paths": {
+      "@haizhi/ng-hertz/*": ["./*"]
+    }
+  }
+}

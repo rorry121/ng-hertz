@@ -12,11 +12,7 @@
     "importHelpers": true,
     "target": "es2015",
     "typeRoots": ["node_modules/@types"],
-    "lib": ["es2018", "dom"],
-    "paths": {
-      "@haizhi/ng-hertz": ["ng-hertz-library/components"],
-      "@haizhi/ng-hertz/*": ["ng-hertz-library/components/*"]
-    }
+    "lib": ["es2018", "dom"]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

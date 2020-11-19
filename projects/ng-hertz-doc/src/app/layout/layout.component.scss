@@ -1,0 +1,16 @@
+.doc-layout {
+  height: 100%;
+  width: 100%;
+  color: var(--type-800);
+  padding-top: var(--header-height);
+  box-sizing: border-box;
+  background-color: var(--mono-100);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.2, 1, 0.2, 1);
+  .doc-layout-content-wrap {
+    height: 100%;
+  }
+  &.nav-close {
+    --nav-transform: -240px;
+  }
+}

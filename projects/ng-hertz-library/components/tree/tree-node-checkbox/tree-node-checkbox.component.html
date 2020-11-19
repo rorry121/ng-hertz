@@ -1,0 +1,7 @@
+<label
+  hz-checkbox
+  [(ngModel)]="node.checked"
+  [hzDisabled]="node.disabled || node.disableCheckbox"
+  [hzIndeterminate]="node.indeterminate"
+  (ngModelChange)="onCheckedChange($event)"
+></label>
