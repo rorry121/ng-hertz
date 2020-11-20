@@ -5,8 +5,8 @@ const Vinyl = require('vinyl');
 const chalk = require('chalk');
 const debug = require('gulp-debug');
 const changed = require('gulp-changed');
-const demoPath = 'projects/ng-hertz-doc/src/app/components/*/demo/*.ts';
-const markPath = 'projects/ng-hertz-doc/src/assets/markdown/components';
+const demoPath = 'ng-hertz-doc/src/app/components/*/demo/*.ts';
+const markPath = 'ng-hertz-doc/src/assets/markdown/components';
 
 const handleFile = function () {
   return through.obj(function (file, encoding, callback) {

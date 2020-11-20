@@ -20,33 +20,29 @@
           "skipTests": true
         }
       },
-      "root": "projects/ng-hertz-doc",
-      "sourceRoot": "projects/ng-hertz-doc/src",
+      "root": "ng-hertz-doc",
+      "sourceRoot": "ng-hertz-doc/src",
       "prefix": "doc",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "build/ng-hertz-doc",
-            "index": "projects/ng-hertz-doc/src/index.html",
-            "main": "projects/ng-hertz-doc/src/main.ts",
-            "polyfills": "projects/ng-hertz-doc/src/polyfills.ts",
-            "tsConfig": "projects/ng-hertz-doc/tsconfig.app.json",
+            "index": "ng-hertz-doc/src/index.html",
+            "main": "ng-hertz-doc/src/main.ts",
+            "polyfills": "ng-hertz-doc/src/polyfills.ts",
+            "tsConfig": "ng-hertz-doc/tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "projects/ng-hertz-doc/src/favicon.ico",
-              "projects/ng-hertz-doc/src/assets",
-              "projects/ng-hertz-doc/src/manifest.webmanifest"
-            ],
-            "styles": ["projects/ng-hertz-doc/src/styles.scss"],
+            "assets": ["ng-hertz-doc/src/favicon.ico", "ng-hertz-doc/src/assets", "ng-hertz-doc/src/manifest.webmanifest"],
+            "styles": ["ng-hertz-doc/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/ng-hertz-doc/src/environments/environment.ts",
-                  "with": "projects/ng-hertz-doc/src/environments/environment.prod.ts"
+                  "replace": "ng-hertz-doc/src/environments/environment.ts",
+                  "with": "ng-hertz-doc/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -71,7 +67,7 @@
                 }
               ],
               "serviceWorker": true,
-              "ngswConfigPath": "projects/ng-hertz-doc/ngsw-config.json"
+              "ngswConfigPath": "ng-hertz-doc/ngsw-config.json"
             }
           }
         },
@@ -95,34 +91,26 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-hertz-doc/src/test.ts",
-            "polyfills": "projects/ng-hertz-doc/src/polyfills.ts",
-            "tsConfig": "projects/ng-hertz-doc/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-hertz-doc/karma.conf.js",
-            "assets": [
-              "projects/ng-hertz-doc/src/favicon.ico",
-              "projects/ng-hertz-doc/src/assets",
-              "projects/ng-hertz-doc/src/manifest.webmanifest"
-            ],
-            "styles": ["projects/ng-hertz-doc/src/styles.scss"],
+            "main": "ng-hertz-doc/src/test.ts",
+            "polyfills": "ng-hertz-doc/src/polyfills.ts",
+            "tsConfig": "ng-hertz-doc/tsconfig.spec.json",
+            "karmaConfig": "ng-hertz-doc/karma.conf.js",
+            "assets": ["ng-hertz-doc/src/favicon.ico", "ng-hertz-doc/src/assets", "ng-hertz-doc/src/manifest.webmanifest"],
+            "styles": ["ng-hertz-doc/src/styles.scss"],
             "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ng-hertz-doc/tsconfig.app.json",
-              "projects/ng-hertz-doc/tsconfig.spec.json",
-              "projects/ng-hertz-doc/e2e/tsconfig.json"
-            ],
+            "tsConfig": ["ng-hertz-doc/tsconfig.app.json", "ng-hertz-doc/tsconfig.spec.json", "ng-hertz-doc/e2e/tsconfig.json"],
             "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/ng-hertz-doc/e2e/protractor.conf.js",
+            "protractorConfig": "ng-hertz-doc/e2e/protractor.conf.js",
             "devServerTarget": "ng-hertz-doc:serve"
           },
           "configurations": {
@@ -135,32 +123,29 @@
     },
     "ng-hertz-library": {
       "projectType": "library",
-      "root": "projects/ng-hertz-library",
-      "sourceRoot": "projects/ng-hertz-library/components",
+      "root": "ng-hertz-library",
+      "sourceRoot": "ng-hertz-library/components",
       "prefix": "hz",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ng-hertz-library/components/tsconfig.lib.json",
-            "project": "projects/ng-hertz-library/components/ng-package.json"
+            "tsConfig": "ng-hertz-library/components/tsconfig.lib.json",
+            "project": "ng-hertz-library/components/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-hertz-library/components/test.ts",
-            "tsConfig": "projects/ng-hertz-library/components/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-hertz-library/components/karma.conf.js"
+            "main": "ng-hertz-library/components/test.ts",
+            "tsConfig": "ng-hertz-library/components/tsconfig.spec.json",
+            "karmaConfig": "ng-hertz-library/components/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ng-hertz-library/components/tsconfig.lib.json",
-              "projects/ng-hertz-library/components/tsconfig.spec.json"
-            ],
+            "tsConfig": ["ng-hertz-library/components/tsconfig.lib.json", "ng-hertz-library/components/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -179,29 +164,29 @@
     },
     "ng-hertz-ui": {
       "projectType": "library",
-      "root": "projects/ng-hertz-ui",
-      "sourceRoot": "projects/ng-hertz-ui",
+      "root": "ng-hertz-ui",
+      "sourceRoot": "ng-hertz-ui",
       "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ng-hertz-ui/tsconfig.lib.json",
-            "project": "projects/ng-hertz-ui/ng-package.json"
+            "tsConfig": "ng-hertz-ui/tsconfig.lib.json",
+            "project": "ng-hertz-ui/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-hertz-ui/test.ts",
-            "tsConfig": "projects/ng-hertz-ui/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-hertz-ui/karma.conf.js"
+            "main": "ng-hertz-ui/test.ts",
+            "tsConfig": "ng-hertz-ui/tsconfig.spec.json",
+            "karmaConfig": "ng-hertz-ui/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["projects/ng-hertz-ui/tsconfig.lib.json", "projects/ng-hertz-ui/tsconfig.spec.json"],
+            "tsConfig": ["ng-hertz-ui/tsconfig.lib.json", "ng-hertz-ui/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
