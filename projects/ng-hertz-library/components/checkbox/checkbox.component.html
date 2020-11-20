@@ -1,0 +1,22 @@
+<span
+  class="hz-checkbox"
+  [class.hz-checkbox-indeterminate]="hzIndeterminate"
+  [class.hz-checkbox-disabled]="hzDisabled"
+  [class.hz-checkbox-checked]="checked && !hzIndeterminate"
+>
+  <input
+    type="checkbox"
+    class="hz-checkbox-input"
+    [ngModel]="checked"
+    [disabled]="hzDisabled"
+    [attr.autofocus]="hzAutoFocus ? 'autofocus' : null"
+    (keydown)="onKeydown($event)"
+    (ngModelChange)="onModelChange($event)"
+    #inputElement
+  />
+  <span class="hz-checkbox-inner"></span>
+  <span class="hz-checkbox-indeterminate-inner" *ngIf="hzIndeterminate"></span>
+</span>
+<span class="hz-checkbox-text">
+  <ng-content></ng-content>
+</span>
