@@ -11,7 +11,7 @@ const markPath = 'ng-hertz-doc/src/assets/markdown/components';
 const handleFile = function () {
   return through.obj(function (file, encoding, callback) {
     const vinyl = new Vinyl(file);
-    const newContent = '```ts\n' + vinyl.contents.toString() + '\n```';
+    const newContent = '```angular\n' + vinyl.contents.toString() + '\n```';
     vinyl.contents = new Buffer.from(newContent);
     return callback(null, vinyl);
   });

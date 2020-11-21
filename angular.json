@@ -35,7 +35,7 @@
             "aot": false,
             "assets": ["ng-hertz-doc/src/favicon.ico", "ng-hertz-doc/src/assets", "ng-hertz-doc/src/manifest.webmanifest"],
             "styles": ["ng-hertz-doc/src/styles.scss"],
-            "scripts": []
+            "scripts": ["node_modules/prismjs/prism.js", "node_modules/prismjs/components/prism-typescript.min.js"]
           },
           "configurations": {
             "production": {

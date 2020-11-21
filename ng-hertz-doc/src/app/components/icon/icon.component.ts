@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MarkedService } from '../../marked/marked.service';
 
 @Component({
   selector: 'doc-icon',
@@ -6,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./icon.component.scss']
 })
 export class IconComponent implements OnInit {
-  constructor() {}
+  text = '';
+  constructor(private mark: MarkedService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.mark.resolveMdFile('icon/basic.md').subscribe(text => {
+      this.text = this.mark.toHtml(text);
+      console.log(this.text);
+    });
+  }
 }
