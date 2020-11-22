@@ -1,3 +1,9 @@
 **/*.md
 **/*.svg
 package.json
+**/*/test.ts
+
+src/assets/*
+src/index.html
+
+ng-hertz-doc/src/app/components/*/demo/*.ts
