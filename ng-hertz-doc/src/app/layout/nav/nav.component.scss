@@ -7,7 +7,7 @@
   box-shadow: var(--container-c200);
   background-color: var(--background-100);
   transition: all 0.4s cubic-bezier(0.2, 1, 0.2, 1);
-  position: absolute;
+  position: fixed;
   top: 0;
   .doc-nav-list {
     padding: 24px 0;

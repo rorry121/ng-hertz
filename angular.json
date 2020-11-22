@@ -33,7 +33,7 @@
             "polyfills": "ng-hertz-doc/src/polyfills.ts",
             "tsConfig": "ng-hertz-doc/tsconfig.app.json",
             "aot": false,
-            "assets": ["ng-hertz-doc/src/favicon.ico", "ng-hertz-doc/src/assets", "ng-hertz-doc/src/manifest.webmanifest"],
+            "assets": ["ng-hertz-doc/src/favicon.svg", "ng-hertz-doc/src/assets", "ng-hertz-doc/src/manifest.webmanifest"],
             "styles": ["ng-hertz-doc/src/styles.scss"],
             "scripts": ["node_modules/prismjs/prism.js", "node_modules/prismjs/components/prism-typescript.min.js"]
           },
@@ -95,7 +95,7 @@
             "polyfills": "ng-hertz-doc/src/polyfills.ts",
             "tsConfig": "ng-hertz-doc/tsconfig.spec.json",
             "karmaConfig": "ng-hertz-doc/karma.conf.js",
-            "assets": ["ng-hertz-doc/src/favicon.ico", "ng-hertz-doc/src/assets", "ng-hertz-doc/src/manifest.webmanifest"],
+            "assets": ["ng-hertz-doc/src/favicon.svg", "ng-hertz-doc/src/assets", "ng-hertz-doc/src/manifest.webmanifest"],
             "styles": ["ng-hertz-doc/src/styles.scss"],
             "scripts": []
           }

@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'doc-tree-demo-custom-render',
+  selector: 'hz-demo-icon-basic',
   template: `
     <div>
       <hz-tree [hzData]="nodes" [hzNodeTemplate]="nodeTpl" [hzEnableWholeNodeToggle]="true" [hzShowNodeToggle]="false"></hz-tree>
@@ -28,7 +28,7 @@ import { Component, OnInit } from '@angular/core';
     `
   ]
 })
-export class TreeDemoCustomRenderComponent implements OnInit {
+export class HzDemoIconBasic implements OnInit {
   nodes = [
     {
       title: '0-0',

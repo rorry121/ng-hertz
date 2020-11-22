@@ -1,4 +1,14 @@
 <header class="doc-header">
   <i hz-icon hzName="menu" hzSize="24px" class="doc-header-menu" (click)="menuClick.emit()"></i>
-  <div class="doc-header-logo" (click)="changeTheme()"></div>
+  <div class="doc-header-logo"></div>
+  <a class="doc-header-github" href="https://github.com/rorry121/ng-hertz" target="_blank">
+    <i hz-icon hzName="github" hzSize="24px"></i>
+  </a>
+  <i
+    class="doc-header-change-theme"
+    (click)="changeTheme()"
+    hz-icon
+    [hzName]="this.theme === 'light' ? 'sunset' : 'sunrise'"
+    hzSize="24px"
+  ></i>
 </header>

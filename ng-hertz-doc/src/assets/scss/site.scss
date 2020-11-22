@@ -3,3 +3,7 @@
   --nav-width: 240px;
   --nav-transform: 0px;
 }
+body {
+  background-color: var(--background-100);
+  transition: background-color 0.4s cubic-bezier(0.2, 1, 0.2, 1);
+}

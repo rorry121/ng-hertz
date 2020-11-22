@@ -75,6 +75,7 @@ export class HeaderComponent implements OnInit {
     '--container-c500':
       '0px 48px 128px -16px rgba(4, 8, 16, 0.64), 0px 16px 64px -16px rgba(4, 8, 16, 0.72), 0px 0px 1px rgba(4, 8, 16, 0.32)'
   };
+  theme = 'light';
 
   @Output() menuClick = new EventEmitter<void>();
   constructor() {}
@@ -83,7 +84,8 @@ export class HeaderComponent implements OnInit {
 
   changeTheme() {
     const theme = document.documentElement.getAttribute('theme');
-    document.documentElement.setAttribute('theme', theme === 'light' ? 'dark' : 'light');
+    this.theme = theme === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('theme', this.theme);
     // for (const key in this.dark) {
     //   if ( this.dark.hasOwnProperty(key)) {
     //     document.documentElement.style.setProperty(key, this.dark[key]);

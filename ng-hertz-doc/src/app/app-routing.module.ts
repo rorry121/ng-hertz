@@ -7,6 +7,7 @@ export const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
+      { path: '', redirectTo: 'icon', pathMatch: 'full' },
       {
         path: 'icon',
         loadChildren: () => import('./components/icon/icon.module').then(mod => mod.IconModule)
@@ -18,6 +19,10 @@ export const routes: Routes = [
       {
         path: 'nav-menu',
         loadChildren: () => import('./components/nav-menu/nav-menu.module').then(mod => mod.NavMenuModule)
+      },
+      {
+        path: 'checkbox',
+        loadChildren: () => import('./components/checkbox/checkbox.module').then(mod => mod.CheckboxModule)
       }
     ]
   }
