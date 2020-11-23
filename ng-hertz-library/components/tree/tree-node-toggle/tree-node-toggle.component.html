@@ -12,9 +12,6 @@
 </ng-container>
 <ng-template #defaultToggleTpl>
   <button
-    hz-button
-    hzSize="xs"
-    hzType="icon-only"
     [style.transform]="node.expanded ? null : 'rotate(-90deg)'"
     *ngIf="!node.isLeaf && !loading"
     (click)="onClick($event)"
@@ -22,4 +19,9 @@
     <i hz-icon hzName="triangle"></i>
   </button>
 </ng-template>
-<i hz-icon hzName="loading" class="hz-tree-node-toggle-loading" *ngIf="loading"></i>
+<i
+  hz-icon
+  hzName="loading"
+  class="hz-tree-node-toggle-loading"
+  *ngIf="loading"
+></i>

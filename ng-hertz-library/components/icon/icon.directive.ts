@@ -20,7 +20,6 @@ export class HzIconDirective implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.hzName) {
-      console.log('changes.hzName', changes.hzName);
       this.iconService.getIconRequest(this.hzName).subscribe(svg => {
         this.element.nativeElement.innerHTML = svg;
       });

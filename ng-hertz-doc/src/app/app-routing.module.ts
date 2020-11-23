@@ -12,18 +12,18 @@ export const routes: Routes = [
         path: 'checkbox',
         loadChildren: () => import('./components/checkbox/checkbox.module').then(mod => mod.CheckboxModule)
       },
-      {
-        path: 'icon',
-        loadChildren: () => import('./components/icon/icon.module').then(mod => mod.IconModule)
-      },
+      // {
+      //   path: 'icon',
+      //   loadChildren: () => import('./components/icon/icon.module').then(mod => mod.IconModule)
+      // },
       {
         path: 'tree',
         loadChildren: () => import('./components/tree/tree.module').then(mod => mod.TreeModule)
-      },
-      {
-        path: 'nav-menu',
-        loadChildren: () => import('./components/nav-menu/nav-menu.module').then(mod => mod.NavMenuModule)
       }
+      // {
+      //   path: 'nav-menu',
+      //   loadChildren: () => import('./components/nav-menu/nav-menu.module').then(mod => mod.NavMenuModule)
+      // }
     ]
   }
 ];
