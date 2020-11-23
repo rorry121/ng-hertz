@@ -1,1 +1,25 @@
-<p>checkbox works!</p>
+<doc-container>
+  <doc-marked src="checkbox/introduce.md"></doc-marked>
+  <doc-code-box
+    src="checkbox/basic.md"
+    [title]="'基本用法'"
+    [subtitle]="'支持 ENTER 和 SPACE 按键切换选中状态'"
+  >
+    <hz-demo-checkbox-basic></hz-demo-checkbox-basic>
+  </doc-code-box>
+  <doc-code-box
+    src="checkbox/disabled.md"
+    [title]="'禁用状态'"
+    [subtitle]="'通过设置 hzDisabled，可禁用 checkbox'"
+  >
+    <hz-demo-checkbox-disabled></hz-demo-checkbox-disabled>
+  </doc-code-box>
+  <doc-code-box
+    src="checkbox/indeterminate.md"
+    [title]="'半选状态'"
+    [subtitle]="'通过设置 hzIndeterminate，可赋予 checkbox 半选状态样式'"
+  >
+    <hz-demo-checkbox-indeterminate></hz-demo-checkbox-indeterminate>
+  </doc-code-box>
+  <doc-marked src="checkbox/api.md"></doc-marked>
+</doc-container>

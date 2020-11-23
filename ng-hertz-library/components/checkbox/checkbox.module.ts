@@ -8,4 +8,4 @@ import { FormsModule } from '@angular/forms';
   exports: [HzCheckboxComponent],
   imports: [CommonModule, FormsModule]
 })
-export class CheckboxModule {}
+export class HzCheckboxModule {}

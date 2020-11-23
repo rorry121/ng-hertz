@@ -1,0 +1,74 @@
+<section
+  *ngIf="children.length > 0"
+  class="hz-tabs-container"
+  [style.height]="hzTabsRouteMode ? 'auto' : '100%'"
+>
+  <article class="hz-tabs hz-tabs-{{ hzTabsType }}" [class.hz-tabs-scrolling]="scrolling">
+    <span
+      class="hz-tabs-tab-prev"
+      [style.width]="tabScrollBtnWidth + 'px'"
+      *ngIf="scrolling"
+      (click)="scroll('left')"
+    >
+      <!--      <button-->
+      <!--        hz-button-->
+      <!--        hzType="icon-only"-->
+      <!--        [disabled]="transformX === 0"-->
+      <!--        [hzIconOnlyDouble]="true"-->
+      <!--        [hzSize]="sizeMap[hzTabsType]"-->
+      <!--      >-->
+      <!--        <i hz-icon hzName="slicenav-arrow"></i>-->
+      <!--      </button>-->
+    </span>
+    <div class="hz-tabs-ul-wrap">
+      <ul #tabsUlElement>
+        <li
+          *ngFor="let child of children; let i = index; trackBy: trackByFn"
+          [style.width]="hzTabsWidth"
+          (click)="change(i)"
+        >
+          <ng-container *ngIf="child.contentType === 'string'">
+            <a [ngClass]="{ active: i === hzCurIndex }">
+              {{ child.title }}
+            </a>
+          </ng-container>
+          <ng-container *ngIf="child.contentType === 'template'">
+            <ng-container *ngIf="!hzTabsRouteMode">
+              <a [ngClass]="{ active: i === hzCurIndex }">
+                <ng-container *ngTemplateOutlet="child.title"></ng-container>
+              </a>
+            </ng-container>
+            <ng-container *ngIf="hzTabsRouteMode">
+              <ng-container *ngTemplateOutlet="child.title"></ng-container>
+            </ng-container>
+          </ng-container>
+          <ng-container> </ng-container>
+        </li>
+      </ul>
+    </div>
+    <span
+      class="hz-tabs-tab-next"
+      *ngIf="scrolling"
+      [style.width]="tabScrollBtnWidth + 'px'"
+      (click)="scroll('right')"
+    >
+      <!--      <button-->
+      <!--        hz-button-->
+      <!--        hzType="icon-only"-->
+      <!--        [disabled]="transformX === -beyondWidth"-->
+      <!--        [hzIconOnlyDouble]="true"-->
+      <!--        [hzSize]="sizeMap[hzTabsType]"-->
+      <!--      >-->
+      <!--        <i hz-icon hzName="slicenav-arrow"></i>-->
+      <!--      </button>-->
+    </span>
+  </article>
+  <article class="hz-tabs-content" *ngIf="!hzTabsRouteMode">
+    <ng-container *ngTemplateOutlet="children[hzCurIndex]?.templateRef"></ng-container>
+    <ng-container *ngFor="let child of children; let i = index">
+      <ng-container *ngIf="hzCurIndex === i && child.lazyTemplate">
+        <ng-container *ngTemplateOutlet="child.lazyTemplate"></ng-container>
+      </ng-container>
+    </ng-container>
+  </article>
+</section>

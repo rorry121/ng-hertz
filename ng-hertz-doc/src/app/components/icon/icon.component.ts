@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MarkedService } from '../../marked/marked.service';
+import { MarkedService } from '../../container/marked/marked.service';
 
 @Component({
   selector: 'doc-icon',

@@ -1,0 +1,14 @@
+<section [@arise]="animAppear ? 'appear' : 'wait'" class="doc-container markdown">
+  <article class="markdown-content">
+    <ng-content></ng-content>
+  </article>
+  <article class="toc-anchor">
+    <div class="toc-anchor-content" [hidden]="(isWeb$ | async) === false">
+      <ul>
+        <li *ngFor="let item of toc; let i = index" [ngClass]="{ active: tocActiveIndex === i }">
+          <a [href]="pathname + '#' + item.id" (click)="tocActiveIndex = i">{{ item.title }}</a>
+        </li>
+      </ul>
+    </div>
+  </article>
+</section>

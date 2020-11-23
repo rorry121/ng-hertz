@@ -1,0 +1,28 @@
+.doc-code-box {
+  border-radius: 3px;
+  border: 1px solid var(--mono-a300);
+  padding: 8px 0;
+  font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'STHeiti', 'SimSun', 'Segoe UI', AppleSDGothicNeo-Medium,
+    'Malgun Gothic', Arial, freesans, sans-serif;
+  .doc-subtitle {
+    line-height: 32px;
+    color: var(--type-800);
+    margin: 8px 16px;
+    font-size: 13px;
+  }
+  .doc-preview {
+    width: 100%;
+    padding: 42px 16px 50px 16px;
+    box-sizing: border-box;
+  }
+  .doc-marked-wrap {
+    padding: 24px 16px;
+    overflow: scroll;
+    max-height: 600px;
+    ::ng-deep .doc-marked pre {
+      margin: 0;
+      border: none;
+      background: 0 0;
+    }
+  }
+}

@@ -1,11 +1,12 @@
+```angular
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'hz-demo-checkbox-basic',
+  selector: 'hz-demo-checkbox-disabled',
   template: `
     <div>
       <ng-container *ngFor="let item of list; let i = index">
-        <label hz-checkbox [(ngModel)]="item.checked" (ngModelChange)="onModelChange($event, item)">{{item.label}}</label>
+        <label hz-checkbox [(ngModel)]="item.checked" [hzDisabled]="true">{{item.label}}</label>
       </ng-container>
     </div>
   `,
@@ -15,7 +16,7 @@ import { Component, OnInit } from '@angular/core';
     }
   `]
 })
-export class HzDemoCheckboxBasic implements OnInit {
+export class HzDemoCheckboxDisabled implements OnInit {
   list = [
     { label: 'Apple', value: 'Apple', checked: true },
     { label: 'Pear', value: 'Pear', checked: false },
@@ -29,3 +30,5 @@ export class HzDemoCheckboxBasic implements OnInit {
     console.log(checked, item);
   }
 }
+
+```

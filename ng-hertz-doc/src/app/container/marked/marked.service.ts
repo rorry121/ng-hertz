@@ -24,7 +24,7 @@ export class MarkedService {
   toHtml(mdStr: string) {
     const rendererMD = new Marked.Renderer();
     Marked.setOptions({
-      headerPrefix: 'hz-',
+      headerPrefix: '',
       langPrefix: 'language-',
       renderer: rendererMD,
       highlight: (code: string, lang: string) => {

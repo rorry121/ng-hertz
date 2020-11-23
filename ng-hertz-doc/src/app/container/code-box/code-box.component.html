@@ -1,0 +1,16 @@
+<h5 class="doc-code-box-title" [id]="tocId">{{ title }}</h5>
+<article class="doc-code-box">
+  <div class="doc-subtitle">{{ subtitle }}</div>
+  <hz-tabs hzTabsType="dense" (hzCurIndexChange)="onTabsIndexChange($event)">
+    <hz-tab [hzTabTitle]="'示例'">
+      <div class="doc-preview">
+        <ng-content></ng-content>
+      </div>
+    </hz-tab>
+    <hz-tab [hzTabTitle]="'代码'">
+      <div class="doc-marked-wrap" *ngIf="loadCode">
+        <doc-marked [src]="src"></doc-marked>
+      </div>
+    </hz-tab>
+  </hz-tabs>
+</article>

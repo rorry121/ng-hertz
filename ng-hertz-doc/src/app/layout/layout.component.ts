@@ -1,7 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable, Subject } from 'rxjs';
 import { map, shareReplay, takeUntil } from 'rxjs/operators';
+import { CodeBoxComponent } from '../container/code-box/code-box.component';
 
 @Component({
   selector: 'doc-layout',
@@ -16,6 +17,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
     shareReplay(),
     takeUntil(this.destroy$)
   );
+  @ViewChildren(CodeBoxComponent) listOfCodeBoxComponent: QueryList<CodeBoxComponent>;
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit() {

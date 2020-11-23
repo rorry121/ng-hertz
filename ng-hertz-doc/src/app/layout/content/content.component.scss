@@ -1,6 +1,5 @@
 .doc-content {
   margin-left: calc(var(--nav-width) + var(--nav-transform));
-  padding: 32px 6%;
   transition: margin-left 0.4s cubic-bezier(0.2, 1, 0.2, 1);
-  overflow-x: auto;
+  font-size: 14px;
 }
