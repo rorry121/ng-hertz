@@ -5,5 +5,3 @@ package.json
 
 src/assets/*
 src/index.html
-
-ng-hertz-doc/src/app/components/*/demo/*.ts

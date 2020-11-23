@@ -6,7 +6,7 @@
   "semi": true,
   "arrowParens": "avoid",
   "bracketSpacing": true,
-  "proseWrap": "never",
+  "proseWrap": "preserve",
   "trailingComma": "none",
   "overrides": [
     {
