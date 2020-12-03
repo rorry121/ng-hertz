@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HzTabsComponent } from './tabs.component';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { HzIconModule } from '@haizhi/ng-hertz/icon';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('HzTabsComponent', () => {
   let component: HzTabsComponent;
@@ -8,7 +11,8 @@ describe('HzTabsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HzTabsComponent]
+      declarations: [HzTabsComponent],
+      imports: [RouterModule, RouterTestingModule, HzIconModule]
     }).compileComponents();
   }));
 

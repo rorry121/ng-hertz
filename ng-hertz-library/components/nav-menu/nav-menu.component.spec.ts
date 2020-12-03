@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HzNavMenuComponent } from './nav-menu.component';
+import { HzIconModule } from '@haizhi/ng-hertz/icon';
+import { RouterModule } from '@angular/router';
+import { HzNavMenuModule } from './nav-menu.module';
 
 describe('HzNavMenuComponent', () => {
   let component: HzNavMenuComponent;
@@ -8,7 +11,8 @@ describe('HzNavMenuComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HzNavMenuComponent]
+      declarations: [HzNavMenuComponent],
+      imports: [HzIconModule, RouterModule]
     }).compileComponents();
   }));
 

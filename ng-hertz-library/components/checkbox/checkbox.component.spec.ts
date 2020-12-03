@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HzCheckboxComponent } from './checkbox.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HzCheckboxModule } from './checkbox.module';
 
 describe('CheckboxComponent', () => {
   let component: HzCheckboxComponent;
@@ -8,7 +10,8 @@ describe('CheckboxComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HzCheckboxComponent]
+      declarations: [HzCheckboxComponent],
+      imports: [FormsModule, ReactiveFormsModule]
     }).compileComponents();
   }));
 
