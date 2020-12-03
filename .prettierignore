@@ -1,7 +1,10 @@
 **/*.md
+**/*.yaml
 **/*.svg
 package.json
 **/*/test.ts
 
 src/assets/*
 src/index.html
+
+
