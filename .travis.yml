@@ -4,6 +4,15 @@ git:
   depth: 1
 node_js:
   - '10' #指定node版本
+env:
+  global: CODECOV_TOKEN=$CODECOV_TOKEN
+jobs:
+  include:
+    - stage: Test coverage
+      script:
+        - npm run test
+      after_script:
+        - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./node_modules/.bin/codecov; fi
 branchs:
   only:
     - master #指定只有检测到master分支有变动时才执行git 任务
