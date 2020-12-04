@@ -16,7 +16,6 @@ notifications:
   email:
     recipients:
       - ieloul@foxmail.com
-    on_success: always
     on_failure: always
 after_success:
   - ssh travis@39.107.82.42 -o StrictHostKeyChecking=no 'cd ~/ng-hertz && sh scripts/travis-deploy.sh'
