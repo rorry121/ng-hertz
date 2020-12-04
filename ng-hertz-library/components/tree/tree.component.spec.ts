@@ -38,15 +38,14 @@ describe('TreeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    fixture.detectChanges();
-    expect(component).toBeTruthy();
-  });
-
-  it('should nzBlockNode work', fakeAsync(() => {
-    fixture = TestBed.createComponent(HzTreeComponent);
-    fixture.detectChanges();
-    const treeElement = fixture.nativeElement as HTMLElement;
-    expect(treeElement.classList).toContain('hz-tree');
-  }));
+  // it('should create', () => {
+  //   expect(component).toBeTruthy();
+  // });
+  //
+  // it('should nzBlockNode work', fakeAsync(() => {
+  //   fixture = TestBed.createComponent(HzTreeComponent);
+  //   fixture.detectChanges();
+  //   const treeElement = fixture.nativeElement as HTMLElement;
+  //   expect(treeElement.classList).toContain('hz-tree');
+  // }));
 });

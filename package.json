@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 3333 & npm run mark:watch",
-    "test": "ng test",
+    "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build": "node --max_old_space_size=4096 ./node_modules/@angular/cli/bin/ng build --project=ng-hertz-library",
