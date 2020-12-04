@@ -6,13 +6,6 @@ node_js:
   - '10' #指定node版本
 env:
   global: CODECOV_TOKEN=$CODECOV_TOKEN
-jobs:
-  include:
-    - stage: Test coverage
-      script:
-        - npm run test
-      after_script:
-        - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./node_modules/.bin/codecov; fi
 branchs:
   only:
     - master #指定只有检测到master分支有变动时才执行git 任务
@@ -20,7 +13,9 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_04674a2f3de9_key -iv $encrypted_04674a2f3de9_iv
     -in id_rsa.enc -out ~/.ssh/id_rsa -d
   - chmod 600 ~/.ssh/id_rsa
-install: skip
+install:
+  - npm run test
+  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./node_modules/.bin/codecov; fi
 notifications:
   email:
     recipients:
