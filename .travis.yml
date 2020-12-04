@@ -15,7 +15,9 @@ before_install:
   - chmod 600 ~/.ssh/id_rsa
 install:
   - npm i
+script:
   - npm run test
+after_script:
   - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./node_modules/.bin/codecov; fi
 notifications:
   email:
