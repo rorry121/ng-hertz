@@ -19,10 +19,11 @@ script:
   - npm run test
 after_script:
   - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./node_modules/.bin/codecov; fi
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then who && ssh travis@39.107.82.42 -o StrictHostKeyChecking=no 'cd ~/ng-hertz && sh scripts/travis-deploy.sh'; fi
 notifications:
   email:
     recipients:
       - ieloul@foxmail.com
     on_failure: always
-after_success:
-  - ssh travis@39.107.82.42 -o StrictHostKeyChecking=no 'cd ~/ng-hertz && sh scripts/travis-deploy.sh'
+#after_success:
+#  - ssh travis@39.107.82.42 -o StrictHostKeyChecking=no 'cd ~/ng-hertz && sh scripts/travis-deploy.sh'
