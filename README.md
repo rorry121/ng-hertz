@@ -14,3 +14,33 @@
 [![Codecov](https://img.shields.io/codecov/c/github/rorry121/ng-hertz)](https://codecov.io/gh/rorry121/ng-hertz/)
 
 </div>
+
+## Milestone
+
+
+- [ ] button
+- [x] checkbox
+- [ ] icon
+- [ ] input
+- [ ] radio
+- [ ] message
+- [ ] notification
+- [ ] tag
+- [ ] switch
+- [ ] select
+- [ ] cascader
+- [ ] date-picker
+- [ ] tooltip
+- [ ] popover
+- [ ] menu-list
+- [ ] tabs
+- [ ] upload
+- [ ] steps
+- [ ] modal
+- [ ] progress
+- [ ] empty
+- [ ] table
+- [ ] tree
+- [ ] tree-select
+- [x] nav-menu
+- [ ] **more components ...**
