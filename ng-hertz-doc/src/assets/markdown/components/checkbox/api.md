@@ -3,7 +3,7 @@
 `[hz-checkbox]`
 
 | 属性 | 类型 | 描述 | 默认值 |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | `[ngModel]` | `boolean`|是否选中，可双向绑定| `false` |
 | `[hzAutoFocus]` | `boolean`|自动获取焦点| `false` |
 | `[hzDisabled]` | `boolean` |是否禁用 checkbox | `false` |
