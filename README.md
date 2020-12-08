@@ -10,9 +10,8 @@
 
 <div align="center">
 
-[![Travis (.com)](https://img.shields.io/travis/com/rorry121/ng-hertz)](https://travis-ci.com/rorry121/ng-hertz)
+[![Travis (.org)](https://img.shields.io/travis/rorry121/ng-hertz)](https://travis-ci.org/rorry121/ng-hertz)
 [![Codecov](https://img.shields.io/codecov/c/github/rorry121/ng-hertz)](https://codecov.io/gh/rorry121/ng-hertz/)
-
 </div>
 
 ## Milestone
