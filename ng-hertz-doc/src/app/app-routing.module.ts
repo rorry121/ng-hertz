@@ -7,7 +7,7 @@ export const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: '', redirectTo: 'checkbox', pathMatch: 'full' },
+      { path: '', redirectTo: 'button', pathMatch: 'full' },
       {
         path: 'button',
         loadChildren: () => import('./components/button/button.module').then(mod => mod.ButtonModule)

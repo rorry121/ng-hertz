@@ -17,7 +17,7 @@
 ## Milestone
 
 
-- [ ] button
+- [x] button
 - [x] checkbox
 - [ ] icon
 - [ ] input
@@ -39,7 +39,7 @@
 - [ ] progress
 - [ ] empty
 - [ ] table
-- [ ] tree
+- [x] tree
 - [ ] tree-select
-- [x] nav-menu
+- [ ] nav-menu
 - [ ] **more components ...**
