@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'doc-code-box',
@@ -11,11 +11,11 @@ export class CodeBoxComponent implements OnInit {
   @Input() src: string;
   @Input() title: string;
   @Input() subtitle: string;
+  @Input() onlyMark = false;
   constructor() {}
 
   ngOnInit() {
     this.tocId = this.src.match(/\/(\S*).md/)[1];
-    console.log(this.tocId);
   }
 
   onTabsIndexChange(index: number) {

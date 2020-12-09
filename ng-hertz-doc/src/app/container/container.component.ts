@@ -71,7 +71,6 @@ export class ContainerComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     this.toc = this.listOfCodeBoxComponent.toArray().map(e => ({ id: e.tocId, title: e.title }));
-    this.toc.push({ id: 'api', title: 'API' });
     // 子组件 markdown 解析完成
     zip(...this.listOfMarkdownComponent.toArray().map(e => e.markedDone$)).subscribe(() => {
       this.animAppear = true;
