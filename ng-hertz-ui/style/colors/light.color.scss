@@ -1,4 +1,4 @@
-:root {
+:root[theme='light'] {
   /** primary **/
   --primary-900: #1f71ff;
   --primary-800: #3d85ff;
@@ -54,6 +54,8 @@
 
   /** orange **/
   --orange-900: #ff9431;
+  --orange-800: #ffb331;
+  --orange-700: #f88f2e;
   --orange-a100: rgba(255, 148, 49, 0.12);
 
   /** violet **/
@@ -62,18 +64,24 @@
 
   /** yellow **/
   --yellow-900: #f5cd00;
+  --yellow-800: #f5d62b;
+  --yellow-700: #e7c102;
   --yellow-a100: rgba(245, 205, 0, 0.16);
 
   /** red **/
   --red-100: #ffeff1;
   --red-200: #ffe5e8;
   --red-900: #ff5266;
+  --red-800: #ff7784;
+  --red-700: #fd6071;
   --red-a100: rgba(255, 82, 102, 0.09);
   --red-a200: rgba(255, 82, 102, 0.15);
   --red-a300: rgba(255, 82, 102, 0.22);
 
   /** Lime **/
   --lime-900: #239545;
+  --lime-800: #47af4e;
+  --lime-700: #4fba5d;
   --lime-a100: rgba(35, 149, 69, 0.1);
   --lime-a300: rgba(35, 149, 69, 0.22);
 

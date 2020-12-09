@@ -85,6 +85,7 @@ export class HeaderComponent implements OnInit {
   changeTheme() {
     const theme = document.documentElement.getAttribute('theme');
     this.theme = theme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('ng-hertz-doc-theme', this.theme);
     document.documentElement.setAttribute('theme', this.theme);
     // for (const key in this.dark) {
     //   if ( this.dark.hasOwnProperty(key)) {
