@@ -16,6 +16,10 @@ export const routes: Routes = [
         path: 'checkbox',
         loadChildren: () => import('./components/checkbox/checkbox.module').then(mod => mod.CheckboxModule)
       },
+      {
+        path: 'switch',
+        loadChildren: () => import('./components/switch/switch.module').then(mod => mod.SwitchModule)
+      },
       // {
       //   path: 'icon',
       //   loadChildren: () => import('./components/icon/icon.module').then(mod => mod.IconModule)

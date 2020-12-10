@@ -1,0 +1,81 @@
+// switch
+.hz-switch-btn {
+  cursor: pointer;
+  height: 10px;
+  width: 22px;
+  padding: 0;
+  border: none;
+  outline: none;
+  position: relative;
+  background-color: var(--mono-a300);
+  border-radius: 8px;
+  transition: all ease-in-out 200ms;
+  .hz-switch-inner {
+    display: block;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      transform: translateX(0);
+      top: -1px;
+      height: 12px;
+      width: 12px;
+      border-radius: 12px;
+      background-color: var(--mono-600);
+      transition: all 0.2s cubic-bezier(0.2, 1.2, 0.5, 0.9);
+    }
+  }
+  &:focus,
+  &:hover {
+    .hz-switch-inner:before {
+      content: '';
+      display: block;
+      position: absolute;
+      //transform: translateX(0);
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background-color: var(--mono-a100);
+      top: -7px;
+      left: -6px;
+      transition: all 0.2s cubic-bezier(0.2, 1.2, 0.5, 0.9);
+    }
+  }
+  &.hz-switch-btn-checked {
+    background-color: var(--primary-a300);
+    .hz-switch-inner:after {
+      transform: translateX(10px);
+      background-color: var(--primary-900);
+    }
+    .hz-switch-inner:before {
+      transform: translateX(10px);
+      background-color: var(--primary-a100);
+    }
+    &:active {
+      .hz-switch-inner:after {
+        margin-left: -3px;
+        background-color: var(--primary-900);
+      }
+    }
+    &:active:not(.hz-switch-btn-disabled) .hz-switch-inner:before {
+      background-color: var(--primary-a200);
+    }
+  }
+  &-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    &:active {
+      .hz-switch-inner:after {
+        margin-left: 0;
+      }
+    }
+  }
+  &:active:not(&-disabled) {
+    .hz-switch-inner:after {
+      width: 15px;
+    }
+    .hz-switch-inner:before {
+      background-color: var(--primary-a200);
+    }
+  }
+}

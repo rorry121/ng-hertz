@@ -1,0 +1,9 @@
+<button
+  class="hz-switch-btn"
+  [class.hz-switch-btn-checked]="checked === hzCheckedValue"
+  [class.hz-switch-btn-disabled]="hzDisabled"
+  [disabled]="hzDisabled"
+  (keydown)="onKeydown($event)"
+>
+  <span class="hz-switch-inner"></span>
+</button>
