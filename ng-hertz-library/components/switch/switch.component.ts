@@ -24,7 +24,7 @@ export class HzSwitchComponent implements OnInit {
   checked: HzSwitchValue;
   @Input() hzDisabled = false;
   @Input() hzCheckedValue: HzSwitchValue = true;
-  @Input() hzUnCheckedValue: HzSwitchValue = false;
+  @Input() hzUncheckedValue: HzSwitchValue = false;
   constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {}
@@ -35,7 +35,7 @@ export class HzSwitchComponent implements OnInit {
     }
     this.onTouched();
     if (this.checked === this.hzCheckedValue) {
-      this.updateValue(this.hzUnCheckedValue);
+      this.updateValue(this.hzUncheckedValue);
     } else {
       this.updateValue(this.hzCheckedValue);
     }
@@ -53,7 +53,7 @@ export class HzSwitchComponent implements OnInit {
       return;
     }
     if (event.keyCode === LEFT_ARROW) {
-      this.updateValue(this.hzUnCheckedValue);
+      this.updateValue(this.hzUncheckedValue);
       event.preventDefault();
     } else if (event.keyCode === RIGHT_ARROW) {
       this.updateValue(this.hzCheckedValue);
