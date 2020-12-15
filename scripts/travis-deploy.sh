@@ -1,5 +1,6 @@
   cd ~
-  git clone https://github.com/rorry121/ng-hertz.git
+  rm -rf ~/ng-hertz
+  git clone https://github.com/rorry121/ng-hertz.git --depth=1
   cd ./ng-hertz
   pwd
   npm i
