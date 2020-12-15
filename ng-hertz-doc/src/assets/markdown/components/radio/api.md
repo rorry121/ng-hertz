@@ -1,10 +1,11 @@
 
-`<hz-switch>`
+`<hz-radio>`
 
 | 属性 | 类型 | 描述 | 默认值 |
 | --- | --- | --- | --- |
-| `[ngModel]` | `HzSwitchValue`| 可双向绑定，支持 `boolean`、`string`、`number` 类型| - |
-| `[hzDisabled]` | `boolean`|是否禁用 switch| `false` |
-| `[hzCheckedValue]` | `HzSwitchValue`|开关开启时，给 ngModel 设定的值| `true` |
-| `[hzUncheckedValue]` | `HzSwitchValue`|开关关闭时，给 ngModel 设定的值| `false` |
-| `(ngModelChange)` | `EventEmitter<HzSwitchValue>` | ngModel 状态变化回调 | - |
+| `[ngModel]` | `any`| 可双向绑定| - |
+| `[hzValue]` | `any`| radio 绑定的值 | `-` |
+| `[hzName]` | `string`| 设置 radio name 属性 | - |
+| `[hzDisabled]` | `boolean`|是否禁用 radio| `false` |
+| `[hzAutoFocus]` | `boolean`| 自动聚焦 | `false` |
+| `(ngModelChange)` | `EventEmitter<any>` | ngModel 状态变化回调 | - |
