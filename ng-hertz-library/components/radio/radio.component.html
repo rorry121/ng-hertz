@@ -1,0 +1,21 @@
+<span
+  class="hz-radio"
+  [class.hz-radio-disabled]="hzDisabled"
+  [class.hz-radio-checked]="checked"
+>
+  <input
+    type="radio"
+    class="hz-radio-input"
+    [ngModel]="value"
+    [disabled]="hzDisabled"
+    [attr.autofocus]="hzAutoFocus ? 'autofocus' : null"
+    (ngModelChange)="onModelChange($event)"
+    [name]="hzName"
+    [value]="hzValue"
+    #inputElement
+  />
+  <span class="hz-radio-inner"></span>
+</span>
+<span class="hz-radio-text">
+  <ng-content></ng-content>
+</span>

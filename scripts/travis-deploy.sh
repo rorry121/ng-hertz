@@ -1,6 +1,7 @@
-
+  cd ~
+  git clone https://github.com/rorry121/ng-hertz.git
+  cd ./ng-hertz
   pwd
-  git pull
   npm i
   npm run build:doc
   cd build

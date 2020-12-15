@@ -18,7 +18,7 @@ script:
 after_script:
   - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./node_modules/.bin/codecov; fi
   # travis 默认当有 新 pr 提交时会触发任务，当为 pr 触发时不去服务器构建，因为下面执行的脚本里只构建 master 分支
-  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then who && ssh travis@39.107.82.42 -o StrictHostKeyChecking=no 'cd ~/ng-hertz && sh scripts/travis-deploy.sh'; fi
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then who && ssh travis@39.107.82.42 -o StrictHostKeyChecking=no 'rm -rf ~/ng-hertz && sh scripts/travis-deploy.sh'; fi
 notifications:
   email:
     recipients:

@@ -21,11 +21,11 @@
 - [x] checkbox
 - [ ] icon
 - [ ] input
-- [ ] radio
+- [x] radio
 - [ ] message
 - [ ] notification
 - [ ] tag
-- [ ] switch
+- [x] switch
 - [ ] select
 - [ ] cascader
 - [ ] date-picker

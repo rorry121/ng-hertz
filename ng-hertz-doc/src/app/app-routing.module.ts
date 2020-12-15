@@ -20,6 +20,10 @@ export const routes: Routes = [
         path: 'switch',
         loadChildren: () => import('./components/switch/switch.module').then(mod => mod.SwitchModule)
       },
+      {
+        path: 'radio',
+        loadChildren: () => import('./components/radio/radio.module').then(mod => mod.RadioModule)
+      },
       // {
       //   path: 'icon',
       //   loadChildren: () => import('./components/icon/icon.module').then(mod => mod.IconModule)
