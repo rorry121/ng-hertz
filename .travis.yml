@@ -16,7 +16,7 @@ install:
 script:
   - npm run test
   - npm run build:doc
-  - scp -r build/ng-hertz-doc travis@39.107.82.42:/www/wwwroot/ssr/panel/public/ng-hertz-doc
+  - scp -r -o StrictHostKeyChecking=no build/ng-hertz-doc travis@39.107.82.42:/www/wwwroot/ssr/panel/public/ng-hertz-doc
 after_script:
   - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./node_modules/.bin/codecov; fi
   # travis 默认当有 新 pr 提交时会触发任务，当为 pr 触发时不去服务器构建，因为下面执行的脚本里只构建 master 分支
