@@ -10,7 +10,7 @@
     [disabled]="hzDisabled"
     [attr.autofocus]="hzAutoFocus ? 'autofocus' : null"
     (ngModelChange)="onModelChange($event)"
-    [name]="hzName"
+    [attr.name]="hzName || null"
     [value]="hzValue"
     #inputElement
   />

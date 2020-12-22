@@ -3,11 +3,23 @@
   <doc-code-box
     src="radio/basic.md"
     [title]="'基本使用'"
-    [subtitle]="
-      '使用 hzType 属性来定义按钮的类型，通过原生 disabled 属性禁用按钮'
-    "
+    [subtitle]="'可通过 ngModel 双向绑定'"
   >
     <hz-demo-radio-basic></hz-demo-radio-basic>
+  </doc-code-box>
+  <doc-code-box
+    src="radio/disabled.md"
+    [title]="'禁用状态'"
+    [subtitle]="'通过 hzDisabled 为 radio 设置禁用状态'"
+  >
+    <hz-demo-radio-disabled></hz-demo-radio-disabled>
+  </doc-code-box>
+  <doc-code-box
+    src="radio/name.md"
+    [title]="'指定 name'"
+    [subtitle]="'通过 hzName 为 radio 设置原生 name 属性，可实现分组'"
+  >
+    <hz-demo-radio-name></hz-demo-radio-name>
   </doc-code-box>
   <doc-code-box
     src="radio/api.md"

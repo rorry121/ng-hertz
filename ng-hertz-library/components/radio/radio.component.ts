@@ -53,6 +53,7 @@ export class HzRadioComponent implements OnInit, ControlValueAccessor {
   onTouched: () => void = () => null;
 
   writeValue(value: boolean): void {
+    console.log(value);
     this.checked = this.hzValue === value;
     this.value = value;
     this.cdr.markForCheck();

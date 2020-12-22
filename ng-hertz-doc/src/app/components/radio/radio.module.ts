@@ -6,9 +6,11 @@ import { RouterModule } from '@angular/router';
 import { HzDemoRadioBasic } from './demo/basic';
 import { HzRadioModule } from '@haizhi/ng-hertz/radio';
 import { FormsModule } from '@angular/forms';
+import { HzDemoRadioDisabled } from './demo/disabled';
+import { HzDemoRadioName } from './demo/name';
 
 @NgModule({
-  declarations: [RadioComponent, HzDemoRadioBasic],
+  declarations: [RadioComponent, HzDemoRadioBasic, HzDemoRadioDisabled, HzDemoRadioName],
   imports: [CommonModule, ContainerModule, HzRadioModule, FormsModule, RouterModule.forChild([{ path: '', component: RadioComponent }])]
 })
 export class RadioModule {}

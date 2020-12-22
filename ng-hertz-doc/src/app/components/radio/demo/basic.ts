@@ -3,11 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'hz-demo-radio-basic',
   template: `
-    <div class="mb-16">
-      <label hz-radio [hzValue]="0" [(ngModel)]="num" [hzName]="'num'" (ngModelChange)="onModelChange($event)">A</label>
-      <label hz-radio [hzValue]="1" [(ngModel)]="num" [hzName]="'num'" (ngModelChange)="onModelChange($event)">B</label>
-      <label hz-radio [hzValue]="2" [(ngModel)]="num" [hzName]="'num'" (ngModelChange)="onModelChange($event)">C</label>
-      <label hz-radio [hzValue]="3" [(ngModel)]="num" [hzName]="'num'" (ngModelChange)="onModelChange($event)" [hzDisabled]="true">D</label>
+    <div>
+      <label hz-radio [hzValue]="'on'" [(ngModel)]="status" (ngModelChange)="onModelChange($event)">On</label>
+      <label hz-radio [hzValue]="'off'" [(ngModel)]="status" (ngModelChange)="onModelChange($event)">Off</label>
     </div>
   `,
   styles: [
@@ -15,14 +13,11 @@ import { Component, OnInit } from '@angular/core';
       [hz-radio] {
         margin-right: 24px;
       }
-      .mb-16 {
-        margin-bottom: 16px;
-      }
     `
   ]
 })
 export class HzDemoRadioBasic implements OnInit {
-  num: number;
+  status: string;
   constructor() {}
 
   ngOnInit() {}
