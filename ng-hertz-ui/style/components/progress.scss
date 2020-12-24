@@ -1,0 +1,70 @@
+.hz-progress-wrapper {
+  position: relative;
+  .hz-progress-line {
+    &-outer {
+      width: 100%;
+      height: 100%;
+    }
+    &-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background-color: var(--mono-a200);
+    }
+    &-bg {
+      position: absolute;
+      background-color: var(--primary-900);
+      height: 100%;
+      left: 0;
+      top: 0;
+      transition: width linear 100ms;
+    }
+  }
+  .hz-progress-circle {
+    font-size: 0;
+    position: relative;
+    &-trail {
+      color: var(--mono-a200);
+    }
+    &-outlet {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      text-align: center;
+    }
+  }
+}
+.hz-progress-status-info {
+  .hz-progress-circle {
+    color: var(--primary-900);
+  }
+  .hz-progress-line .hz-progress-line-bg {
+    background-color: var(--primary-900);
+  }
+}
+.hz-progress-status-success {
+  .hz-progress-circle {
+    color: var(--lime-900);
+  }
+  .hz-progress-line .hz-progress-line-bg {
+    background-color: var(--lime-900);
+  }
+}
+.hz-progress-status-error {
+  .hz-progress-circle {
+    color: var(--red-900);
+  }
+  .hz-progress-line .hz-progress-line-bg {
+    background-color: var(--red-900);
+  }
+}
+.hz-progress-status-warning {
+  .hz-progress-circle {
+    color: var(--orange-900);
+  }
+  .hz-progress-line .hz-progress-line-bg {
+    background-color: var(--orange-900);
+  }
+}

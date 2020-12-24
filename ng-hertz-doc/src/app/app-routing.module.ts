@@ -31,6 +31,10 @@ export const routes: Routes = [
       {
         path: 'tree',
         loadChildren: () => import('./components/tree/tree.module').then(mod => mod.TreeModule)
+      },
+      {
+        path: 'progress',
+        loadChildren: () => import('./components/progress/progress.module').then(mod => mod.ProgressModule)
       }
       // {
       //   path: 'nav-menu',

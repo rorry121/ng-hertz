@@ -1,0 +1,46 @@
+<div class="hz-progress-wrapper hz-progress-status-{{ hzStatus }}">
+  <div
+    class="hz-progress-line"
+    *ngIf="hzType === 'line'"
+    [style.height]="hzStrokeWidth + 'px'"
+  >
+    <div class="hz-progress-line-outer">
+      <div
+        class="hz-progress-line-inner"
+        [style.backgroundColor]="hzTrailColor"
+        [style.opacity]="hzTrailOpacity"
+      ></div>
+      <div
+        class="hz-progress-line-bg"
+        [style.backgroundColor]="hzStrokeColor"
+        [style.opacity]="hzStrokeOpacity"
+        [style.width]="hzPercent + '%'"
+      ></div>
+    </div>
+  </div>
+  <div class="hz-progress-circle" *ngIf="hzType === 'circle'">
+    <svg viewBox="0 0 100 100">
+      <path
+        [attr.d]="pathD"
+        fill="none"
+        [attr.stroke]="hzTrailColor || hzStrokeColor || 'currentColor'"
+        [attr.stroke-opacity]="hzTrailOpacity"
+        [attr.stroke-width]="hzStrokeWidth"
+        [ngStyle]="trailPathStyle"
+        class="hz-progress-circle-trail"
+      ></path>
+      <path
+        [attr.d]="pathD"
+        fill="none"
+        [attr.stroke]="hzStrokeColor || 'currentColor'"
+        [attr.stroke-opacity]="hzStrokeOpacity"
+        [attr.stroke-width]="hzPercent ? hzStrokeWidth : 0"
+        [attr.stroke-linecap]="hzStrokeLinecap"
+        [ngStyle]="stokePathStyle"
+      ></path>
+    </svg>
+    <div class="hz-progress-circle-outlet">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

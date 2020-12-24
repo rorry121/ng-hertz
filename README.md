@@ -36,7 +36,7 @@
 - [ ] upload
 - [ ] steps
 - [ ] modal
-- [ ] progress
+- [x] progress
 - [ ] empty
 - [ ] table
 - [x] tree
