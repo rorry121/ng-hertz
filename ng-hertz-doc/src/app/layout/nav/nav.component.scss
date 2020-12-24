@@ -9,6 +9,7 @@
   transition: all 0.4s cubic-bezier(0.2, 1, 0.2, 1);
   position: fixed;
   top: 0;
+  z-index: 10;
   .doc-nav-list {
     padding: 24px 0;
     li {

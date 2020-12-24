@@ -1,7 +1,12 @@
-<section class="doc-layout" [class.nav-close]="!showNav">
+<section
+  class="doc-layout"
+  [class.nav-close]="!showNav"
+  [ngClass]="{ handset: isHandset$ | async }"
+>
   <doc-header (menuClick)="onMenuClick()"></doc-header>
   <article class="doc-layout-content-wrap">
     <doc-nav></doc-nav>
+    <article class="doc-nav-backdrop" (click)="showNav = false"></article>
     <doc-content>
       <router-outlet></router-outlet>
     </doc-content>

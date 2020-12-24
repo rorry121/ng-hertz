@@ -7,8 +7,29 @@
   background-color: var(--background-100);
   position: relative;
   transition: all 0.4s cubic-bezier(0.2, 1, 0.2, 1);
+  &.handset {
+    .doc-content {
+      margin-left: 0;
+    }
+  }
+  &.handset:not(.nav-close) {
+    .doc-nav-backdrop {
+      visibility: visible;
+      opacity: 1;
+      background: var(--mono-a400);
+      z-index: 1;
+    }
+  }
   .doc-layout-content-wrap {
     height: 100%;
+  }
+  .doc-nav-backdrop {
+    visibility: hidden;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    transition: all 0.4s cubic-bezier(0.2, 1, 0.2, 1);
   }
   &.nav-close {
     --nav-transform: -240px;
