@@ -23,7 +23,7 @@
       <path
         [attr.d]="pathD"
         fill="none"
-        [attr.stroke]="hzTrailColor || hzStrokeColor || 'currentColor'"
+        [attr.stroke]="hzTrailColor || 'currentColor'"
         [attr.stroke-opacity]="hzTrailOpacity"
         [attr.stroke-width]="hzStrokeWidth"
         [ngStyle]="trailPathStyle"
@@ -39,7 +39,7 @@
         [ngStyle]="stokePathStyle"
       ></path>
     </svg>
-    <div class="hz-progress-circle-outlet">
+    <div class="hz-progress-circle-outlet" [style.color]="hzStrokeColor">
       <ng-content></ng-content>
     </div>
   </div>

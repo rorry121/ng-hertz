@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HzProgressComponent } from './progress.component';
 
-describe('ProgressComponent', () => {
+describe('HzProgressComponent', () => {
   let component: HzProgressComponent;
   let fixture: ComponentFixture<HzProgressComponent>;
 

@@ -5,12 +5,20 @@ import { Component, OnInit } from '@angular/core';
   selector: 'hz-demo-progress-circle-custom',
   template: `
     <div class="progress-circle-item">
-      <hz-progress [hzPercent]="60" hzType="circle">
+      <hz-progress [hzPercent]="60" hzStrokeColor="#913dff" hzType="circle" hzStrokeWidth="16" hzStrokeLinecap="butt">
         <div class="progress-item-inner">60 %</div>
       </hz-progress>
     </div>
     <div class="progress-circle-item">
-      <hz-progress [hzPercent]="30" hzType="circle" hzStrokeColor="#FF5266" hzTrailColor="#f5f5f5" [hzStrokeWidth]="12"> </hz-progress>
+      <hz-progress
+        [hzPercent]="30"
+        hzType="circle"
+        hzStrokeColor="#FF5266"
+        hzTrailColor="#FF5266"
+        hzTrailOpacity="0.3"
+        [hzStrokeWidth]="12"
+      >
+      </hz-progress>
     </div>
     <div class="progress-circle-item">
       <hz-progress
@@ -41,7 +49,7 @@ import { Component, OnInit } from '@angular/core';
 
       .progress-item-inner {
         font-weight: 600;
-        font-size: 24px;
+        font-size: 18px;
         height: 100%;
         display: flex;
         width: 100%;
