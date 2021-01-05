@@ -1,0 +1,184 @@
+// tooltip
+$tooltip-distance: 8px;
+$tooltip-arrow-width: 3px;
+$info-tooltip-arrow-width: 3px;
+$tooltip-arrow-wrap-width: 10px;
+$info-tooltip-arrow-wrap-width: 10px;
+$tooltip-arrow-offset: 8px;
+$info-tooltip-arrow-offset: 13px;
+.hz-tooltip {
+  .hz-tooltip-content {
+    padding: 2px 8px;
+    background-color: var(--mono-a900);
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--mono-100);
+    text-align: left;
+    box-sizing: border-box;
+    max-width: 330px;
+    position: relative;
+    .hz-tooltip-arrow {
+      width: $tooltip-arrow-wrap-width;
+      height: $tooltip-arrow-wrap-width;
+      background-color: transparent;
+      position: absolute;
+      &:before {
+        border-color: transparent var(--mono-a900) var(--mono-a900) transparent;
+        height: 0;
+        width: 0;
+        position: absolute;
+        content: '';
+        border-style: solid;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        border-width: $tooltip-arrow-width;
+      }
+    }
+  }
+
+  &.hz-tooltip-info {
+    .hz-tooltip-content {
+      background: var(--mono-100);
+      box-shadow: var(--container-c300);
+      border-radius: 8px;
+      padding: 8px 16px;
+      color: var(--type-800);
+    }
+
+    .hz-tooltip-arrow {
+      &:before {
+        border-color: transparent #fff #fff transparent;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.12);
+        border-width: $info-tooltip-arrow-width;
+      }
+    }
+  }
+
+  // Offset the popover to account for the popover arrow
+  &-placement-top,
+  &-placement-topLeft,
+  &-placement-topRight {
+    padding-bottom: $tooltip-distance;
+    .hz-tooltip-arrow {
+      bottom: -$tooltip-arrow-wrap-width / 2;
+      &:before {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &-placement-top {
+    .hz-tooltip-arrow {
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  }
+
+  &-placement-right,
+  &-placement-rightTop,
+  &-placement-rightBottom {
+    padding-left: $tooltip-distance;
+    .hz-tooltip-arrow {
+      left: -$tooltip-arrow-wrap-width / 2;
+      &:before {
+        transform: rotate(135deg);
+      }
+    }
+  }
+
+  &-placement-right {
+    .hz-tooltip-arrow {
+      transform: translateY(-50%);
+      top: 50%;
+    }
+  }
+
+  &-placement-bottom,
+  &-placement-bottomLeft,
+  &-placement-bottomRight {
+    padding-top: $tooltip-distance;
+    .hz-tooltip-arrow {
+      top: -$tooltip-arrow-wrap-width / 2;
+      &:before {
+        transform: rotate(225deg);
+      }
+    }
+  }
+
+  &-placement-bottom {
+    .hz-tooltip-arrow {
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  }
+
+  &-placement-left,
+  &-placement-leftTop,
+  &-placement-leftBottom {
+    padding-right: $tooltip-distance;
+    .hz-tooltip-arrow {
+      right: -$tooltip-arrow-wrap-width / 2;
+      &:before {
+        transform: rotate(315deg);
+      }
+    }
+  }
+
+  &-placement-left {
+    .hz-tooltip-arrow {
+      transform: translateY(-50%);
+      top: 50%;
+    }
+  }
+
+  &-placement-topLeft,
+  &-placement-bottomLeft {
+    &.hz-tooltip-info .hz-tooltip-arrow {
+      transform: translateX($info-tooltip-arrow-offset);
+      left: 0;
+    }
+    .hz-tooltip-arrow {
+      transform: translateX($tooltip-arrow-offset);
+      left: 0;
+    }
+  }
+  &-placement-topRight,
+  &-placement-bottomRight {
+    &.hz-tooltip-info .hz-tooltip-arrow {
+      transform: translateX(-$info-tooltip-arrow-offset);
+      right: 0;
+    }
+    .hz-tooltip-arrow {
+      transform: translateX(-$tooltip-arrow-offset);
+      right: 0;
+    }
+  }
+
+  &-placement-rightBottom,
+  &-placement-leftBottom {
+    &.hz-tooltip-info .hz-tooltip-arrow {
+      transform: translateY(-$info-tooltip-arrow-offset);
+      bottom: 0;
+    }
+    .hz-tooltip-arrow {
+      transform: translateY(-$tooltip-arrow-offset);
+      bottom: 0;
+    }
+  }
+
+  &-placement-rightTop,
+  &-placement-leftTop {
+    &.hz-tooltip-info .hz-tooltip-arrow {
+      transform: translateY($info-tooltip-arrow-offset);
+      top: 0;
+    }
+    .hz-tooltip-arrow {
+      transform: translateY($tooltip-arrow-offset);
+      top: 0;
+    }
+  }
+}

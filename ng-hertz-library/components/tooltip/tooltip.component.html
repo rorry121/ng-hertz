@@ -1,0 +1,23 @@
+<article
+  class="hz-tooltip hz-tooltip-placement-{{ placement }}"
+  @fadeMotion
+  (@fadeMotion.done)="onAnimationEvent($event)"
+  *ngIf="show"
+  [ngClass]="{ 'hz-tooltip-info': type === 'info' }"
+>
+  <div
+    class="hz-tooltip-content"
+    [style.width]="width"
+    [style.maxWidth]="maxWidth"
+  >
+    <div class="hz-tooltip-inner">
+      <ng-container *ngIf="contentType === 'string'">{{
+        content
+      }}</ng-container>
+      <ng-container *ngIf="contentType === 'template'">
+        <ng-container *ngTemplateOutlet="content"></ng-container>
+      </ng-container>
+    </div>
+    <div class="hz-tooltip-arrow" *ngIf="type === 'info' && showArrow"></div>
+  </div>
+</article>

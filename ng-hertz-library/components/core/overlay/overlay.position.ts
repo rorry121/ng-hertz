@@ -120,6 +120,7 @@ export const OverlayPositionMap: Record<OverLayPlacement, ConnectionPositionPair
   leftTop: new OverlayPositionLeftTop(),
   leftBottom: new OverlayPositionLeftBottom()
 };
+export const OverlayPositionList = Object.values(OverlayPositionMap);
 
 export const OverlayPositionMapOffset4: Record<OverLayPlacement, ConnectionPositionPair> = {
   top: new OverlayPositionTop(0, -4),
@@ -135,6 +136,7 @@ export const OverlayPositionMapOffset4: Record<OverLayPlacement, ConnectionPosit
   leftTop: new OverlayPositionLeftTop(-4, 0),
   leftBottom: new OverlayPositionLeftBottom(-4, 0)
 };
+export const OverlayPositionListOffset4 = Object.values(OverlayPositionMapOffset4);
 
 export function getPlacementName(position: ConnectedOverlayPositionChange): OverLayPlacement {
   for (const placement in OverlayPositionMap) {
