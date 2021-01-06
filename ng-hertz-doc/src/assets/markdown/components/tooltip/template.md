@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
       <button hz-button hzType="outline" hz-tooltip [hzTooltipTitle]="template">This tooltip with a icon</button>
       <ng-template #template>
         <div>
-          <i hz-icon hzName="info-sign-bold" [hzColor]="'#ffffff'"></i>
+          <i hz-icon hzName="info-sign-bold"></i>
           <span>this tooltip with a icon</span>
         </div>
       </ng-template>

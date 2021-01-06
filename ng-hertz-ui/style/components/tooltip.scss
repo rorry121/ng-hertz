@@ -42,7 +42,7 @@ $info-tooltip-arrow-offset: 13px;
 
   &.hz-tooltip-info {
     .hz-tooltip-content {
-      background: var(--mono-100);
+      background: var(--background-400);
       box-shadow: var(--container-c300);
       border-radius: 8px;
       padding: 8px 16px;
@@ -51,7 +51,7 @@ $info-tooltip-arrow-offset: 13px;
 
     .hz-tooltip-arrow {
       &:before {
-        border-color: transparent #fff #fff transparent;
+        border-color: transparent var(--background-400) var(--background-400) transparent;
         box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.12);
         border-width: $info-tooltip-arrow-width;
       }
