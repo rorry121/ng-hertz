@@ -124,6 +124,12 @@ export abstract class HzTooltipBaseDirective implements OnInit, OnDestroy, After
           this.overlayRef.detach();
         });
       }
+      this.overlayRef
+        .detachments()
+        .pipe(takeUntil(this.destroy$))
+        .subscribe(() => {
+          this.hzVisible = false;
+        });
     }
   }
 
