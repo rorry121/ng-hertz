@@ -35,6 +35,10 @@ export const routes: Routes = [
       {
         path: 'progress',
         loadChildren: () => import('./components/progress/progress.module').then(mod => mod.ProgressModule)
+      },
+      {
+        path: 'tooltip',
+        loadChildren: () => import('./components/tooltip/tooltip.module').then(mod => mod.TooltipModule)
       }
       // {
       //   path: 'nav-menu',

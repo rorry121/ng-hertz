@@ -5,7 +5,7 @@
 | --- | --- | --- | --- |
 | `[hzPercent]` | `number` | 进度条百分比 | `0` |
 | `[hzStatus]` | `'info'` ｜ `'success'` ｜ `'error'` ｜ `'warning'` | 进度条状态、对应内置四种颜色 | `'info'` |
-| `[hzStrokeWidth]` | `number` | 进度条路宽度 | `5` |
+| `[hzStrokeWidth]` | `number` | 长条：进度条带的宽度（px），环形：进度条带占整体百分比 | `5` |
 | `[hzStrokeColor]` | `string`| 进度填充区域颜色 | - |
 | `[hzStrokeOpacity]` | `number` | 进度填充区域透明度 | `false` |
 | `[hzTrailColor]` | `string`| 整个轨迹的背景颜色 | `false` |
